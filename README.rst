@@ -29,22 +29,6 @@ Add ``cmsplugin_accordion`` to your ``INSTALLED_APPS``
         'cmsplugin_accordion',
     )
 
-Add the ``cmsplugin_accordion`` URLs to your ``urls.py``
-
-.. code-block:: python
-
-    urlpatterns = patterns('',
-        ...
-        url(r'^accordion/', include('cmsplugin_accordion.urls')),
-    )
-
-Before your tags/filters are available in your templates, load them by using
-
-.. code-block:: html
-
-	{% load cmsplugin_accordion_tags %}
-
-
 Don't forget to migrate your database
 
 .. code-block:: bash
@@ -55,8 +39,14 @@ Don't forget to migrate your database
 Usage
 -----
 
-TODO: Describe usage or point to docs. Also describe available settings and
-templatetags.
+1. Create a new ``Accordion`` instance via the Django admin.
+2. Create a few ``AccordionRow`` instances via the Django admin that belong
+   to the Accordion instance you created before.
+3. Go to one of your CMS pages and add the ``Accordion Plugin``
+4. Edit the ``cmsplugin_accordion/accordion_plugin.html`` template to your
+   liking.
+
+That's it. You should now be able to embed accordions into your placeholders.
 
 
 Contribute
