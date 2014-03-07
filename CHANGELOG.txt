@@ -1,5 +1,9 @@
 === (ongoing) ===
 
+=== 0.2 ===
+
+- New approach for better admin / ATTENTION: Reset migrations
+
 === 0.1 ===
 - Initial commit
 
