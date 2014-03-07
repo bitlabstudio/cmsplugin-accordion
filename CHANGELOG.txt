@@ -1,5 +1,7 @@
 === (ongoing) ===
 
+=== 0.2.1 ===
+
 - Better plugin name in Placeholder admin
 
 === 0.2 ===
