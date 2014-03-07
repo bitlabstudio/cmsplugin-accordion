@@ -4,8 +4,8 @@ import factory
 from .. import models
 
 
-class AccordionFactory(factory.DjangoModelFactory):
-    FACTORY_FOR = models.Accordion
+class AccordionPluginFactory(factory.DjangoModelFactory):
+    FACTORY_FOR = models.AccordionPlugin
 
     name = factory.Sequence(lambda n: 'name {0}'.format(n))
 
@@ -13,11 +13,5 @@ class AccordionFactory(factory.DjangoModelFactory):
 class AccordionRowFactory(factory.DjangoModelFactory):
     FACTORY_FOR = models.AccordionRow
 
-    accordion = factory.SubFactory(AccordionFactory)
+    accordion = factory.SubFactory(AccordionPluginFactory)
     title = factory.Sequence(lambda n: 'title {0}'.format(n))
-
-
-class AccordionPluginModel(factory.DjangoModelFactory):
-    FACTORY_FOR = models.AccordionPluginModel
-
-    accordion = factory.SubFactory(AccordionFactory)

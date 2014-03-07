@@ -10,7 +10,7 @@ class AccordionPluginTestCase(TestCase):
     longMessage = True
 
     def test_plugin(self):
-        plugin_model = factories.AccordionPluginModel()
+        plugin_model = factories.AccordionPluginFactory()
         plugin = cms_plugins.AccordionPlugin()
         result = plugin.render({}, plugin_model, None)
         self.assertEqual(result['instance'], plugin_model, msg=(

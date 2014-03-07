@@ -6,7 +6,7 @@ from cms.models.fields import PlaceholderField
 from cms.models.pluginmodel import CMSPlugin
 
 
-class Accordion(models.Model):
+class AccordionPlugin(CMSPlugin):
     """
     Main object that groups several accordion elements together.
 
@@ -17,7 +17,9 @@ class Accordion(models.Model):
     name = models.CharField(
         verbose_name=_('Name'),
         max_length=256,
-        unique=True,
+        help_text=_(
+            'Try to keep this name unique. It will help you distinguish'
+            ' different accordions from each other in the Django admin'),
     )
 
     class Meta:
@@ -41,7 +43,7 @@ class AccordionRow(models.Model):
 
     """
     accordion = models.ForeignKey(
-        'cmsplugin_accordion.Accordion',
+        'cmsplugin_accordion.AccordionPlugin',
         verbose_name=_('Accordion'),
         related_name='accordion_rows',
     )
@@ -62,10 +64,3 @@ class AccordionRow(models.Model):
 
     def __unicode__(self):
         return '{0} - {1}'.format(self.accordion.name, self.title)
-
-
-class AccordionPluginModel(CMSPlugin):
-    accordion = models.ForeignKey(
-        'cmsplugin_accordion.Accordion',
-        verbose_name=_('Accordion'),
-    )

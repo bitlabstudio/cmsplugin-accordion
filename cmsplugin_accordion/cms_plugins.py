@@ -3,11 +3,13 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
 from . import models
+from . import admin
 
 
 class AccordionPlugin(CMSPluginBase):
-    model = models.AccordionPluginModel
+    model = models.AccordionPlugin
     render_template = "cmsplugin_accordion/accordion_plugin.html"
+    inlines = [admin.AccordionRowInline, ]
 
     def render(self, context, instance, placeholder):
         context['instance'] = instance
