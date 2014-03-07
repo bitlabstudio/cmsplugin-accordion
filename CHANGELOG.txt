@@ -1,5 +1,7 @@
 === (ongoing) ===
 
+- Better plugin name in Placeholder admin
+
 === 0.2 ===
 
 - New approach for better admin / ATTENTION: Reset migrations
