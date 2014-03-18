@@ -1,5 +1,7 @@
 === (ongoing) ===
 
+=== 0.2.2 ===
+
 - Fixed plugin template
 
 === 0.2.1 ===
