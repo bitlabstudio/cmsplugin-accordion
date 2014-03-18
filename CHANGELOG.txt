@@ -1,5 +1,7 @@
 === (ongoing) ===
 
+- Fixed plugin template
+
 === 0.2.1 ===
 
 - Better plugin name in Placeholder admin
