@@ -1,5 +1,5 @@
 coverage
-django-cms==2.4.3
+django-cms==3.0.14
 django-coverage
 django-jasmine
 django-nose
